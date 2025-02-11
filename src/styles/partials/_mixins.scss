@@ -1,0 +1,18 @@
+@use './variables' as *;
+@use './global.scss' as *;
+@use './typography' as *;
+
+//Mixin for tablet
+@mixin tablet{
+    @media screen and (min-width:$tablet-breakpointmin){
+        @content;
+    }
+}
+
+//Mixin for desktop
+@mixin desktop{
+    @media scree and (min-width:$desktop-breakpointmin){
+        @content;
+    }
+}
+
