@@ -1,5 +1,4 @@
-//import { useState } from 'react'
-import './App.scss'
+import './App.scss';
 import photos from "./data/photos.json";
 import tags from "./data/tags.json";
 
