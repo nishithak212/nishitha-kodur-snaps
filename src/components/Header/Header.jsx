@@ -1,12 +1,25 @@
-export default function Header() {
+// import FilterDrawer from "../FilterDrawer/FilterDrawer";
 
-    return(
-        <header>
-            <nav className="header-nav">
-        <h1 className="header__title">
-        Snaps
-        </h1>
-        </nav>
-        </header>
-    );
-}
+
+// export default function Header (){
+//     const [selectedTag, setSelectedTag] = useState(null);
+
+//   //Function to update the selected tag
+
+//   const handleTagClick = (tag) => {
+//     setSelectedTag(tag===selectedTag ? null :tag);
+//   };
+
+//     return(
+//         <>
+//         <header className="header">
+//             <div className="header__title">
+//                 <h1>Snaps</h1>
+//             </div>
+//             <div className="header__filter">
+//             <FilterDrawer selectedTag={selectedTag} onTagSelect={handleTagClick}/>
+//             </div>
+//         </header>
+//         </>
+//     );
+// }

@@ -1,0 +1,15 @@
+@use '../../styles/partials/variables'  as *;
+@use '../../styles/partials/mixins'  as *;
+@use '../../styles/partials/typography' as *;
+
+
+.hero{
+    font-size:1.625rem;
+    line-height:2.375rem;
+    font-weight:400;
+        &--italic{
+            font-style: italic;
+        }
+        }
+ 
+
