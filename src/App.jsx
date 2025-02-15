@@ -6,6 +6,7 @@ import FilterDrawer from "./components/FilterDrawer/FilterDrawer";
 import tags from "./data/tags.json";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Hero from "./components/Hero/Hero";
 
 
 
@@ -26,6 +27,7 @@ function App() {
     <div className="app">
       <h1>Snaps</h1>
       <FilterDrawer selectedTag={selectedTag} onTagSelect={handleTagClick}/>
+      <Hero />
       <PhotoGallery photos={photosData} selectedTag={selectedTag} onTagClick={handleTagClick}/>
       <Footer />
     </div>
