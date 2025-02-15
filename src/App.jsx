@@ -1,15 +1,16 @@
 import './App.scss';
 import Footer from './components/Footer/Footer';
-// import photos from "./data/photos.json";
-// import tags from "./data/tags.json";
+import Header from './components/Header/Header';
+import photos from "./data/photos.json";
+import tags from "./data/tags.json";
 
 function App() {
 
-  // console.log("Photos:",photos);
-  // console.log("Tags",tags);
+  console.log("Photos:",photos);
+  console.log("Tags",tags);
   return (
     <>
-    <h1>Snaps</h1>
+    <Header />
     <Footer />
     </>
   )
