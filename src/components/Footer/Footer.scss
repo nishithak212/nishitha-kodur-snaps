@@ -1,0 +1,62 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+footer,
+footer::before,
+footer::after{
+    box-sizing:border-box;
+    padding-left:1rem;   
+}
+
+.footer{
+    background-color:  #1E6655;
+    
+
+    &__title{
+        font-family:"Newsreader";
+        font-size: 2rem;
+        margin-bottom: 0;
+        padding-bottom:1.5rem;
+    }
+    &__list{
+
+        @include tablet{
+            flex:1;
+            list-style: none;
+            font-family: "Outfit";
+            padding:0;
+            
+        }
+        &--services{
+            list-style: none;
+            font-family: "Outfit";
+            padding-bottom:1.5rem;
+            line-height: 1.4rem;
+        }
+        &--support{
+            list-style:none;
+            font-family: "Outfit";
+            padding-bottom:1.5rem;
+            line-height: 1.4rem;
+        }
+        &--social{
+            display:flex;
+            list-style: none;
+            flex-direction: row;
+            width:30%;
+            justify-content: space-between;
+            padding-bottom:1.5rem;
+        }
+        &--watermark{
+            font-family:"Outfit";
+            color:#1E6655;
+            opacity: 50%;
+            display:flex;
+            list-style: none;
+            flex-direction: row;
+            width:50%;
+            justify-content: space-between;
+        }
+    }
+}

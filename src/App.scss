@@ -5,6 +5,7 @@
 *::before,
 *::after{
     box-sizing:border-box;
+    background-color: $primary-pistachio;
 }
 
 h1{
@@ -12,4 +13,8 @@ h1{
     font-family: "Newsreader";
     font-weight: $font-weight-WordmarkM;
     line-height: $line-height-WordmarkM;
+}
+
+body{
+    background-color: $primary-pistachio;
 }
