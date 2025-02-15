@@ -1,3 +1,4 @@
+import '../PhotoGallery/PhotoGallery.scss'
 import PhotoCard from "../PhotoCard/PhotoCard";
 
 const PhotoGallery = ({photos, selectedTag, onTagClick})=> {

@@ -1,3 +1,5 @@
+import '../PhotoCard/PhotoCard.scss'
+
 const PhotoCard = ({photo , onTagClick}) => {
     return(
     <div className="photo-card">

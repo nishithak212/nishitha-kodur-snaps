@@ -1,0 +1,13 @@
+.photo-card{
+    position:relative;
+}
+.photo-card_image{
+    border-radius: 3.5%;
+    height: 20rem;
+    border: #1E6655 0.5px solid;
+}
+
+.photo-card__photographer{
+   // position:absolute;
+    top:5;
+}
