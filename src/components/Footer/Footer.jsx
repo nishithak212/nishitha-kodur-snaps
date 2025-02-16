@@ -3,7 +3,7 @@ import './Footer.scss';
 
 export default function Footer() {
     return(
-        <footer>
+        <footer className="footer">
             <h1 className="footer__title">Snaps</h1>
         <ul className="footer__list footer__list--services">
             <li className="footer__item">For Photographers</li>

@@ -1,5 +1,32 @@
+@use '../../styles/partials/mixins' as *;
+
 .photo-gallery{
     border-radius: 0.5;
     padding: 0 1rem 0 1rem;
-    
+
+    @include tablet{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:2rem;
+        justify-content: center;
+        padding:0 2.5rem;
+
+        > *{
+            flex:1 1 calc(50% - 1rem);
+           max-width: calc(50% - 1rem);
+        }
+    }
+        @include desktop{
+            display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:2rem;
+        justify-content: center;
+        padding:0 2.5rem;
+            > *{
+                flex:1 1 calc(33.33% - 1rem);
+               max-width: calc(33.33% - 1rem);
+            }
+        }      
 }

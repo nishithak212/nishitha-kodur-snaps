@@ -5,7 +5,9 @@
 
 .hero{
     padding:0 1rem 3rem 1rem;
-
+@include tablet{
+    padding:0 2.5rem 4.5rem 2.5rem;
+}
 
     &__text{
         &--normal{
@@ -13,13 +15,24 @@
             font-size:1.625rem;
             line-height:2.375rem;
             font-weight:300;
-            //height:10rem;
+
+            @include tablet{
+                font-size: 3.25rem;
+                line-height: 4.125rem;
+                font-weight: 300;
+            }
                  }
         &--small{
             font-family: "Outfit";
-            font-size: 1rem;
+            font-size: .625rem;
             line-height: 0.75rem;
-            font-weight: 400;
+            font-weight: 500;
+
+            @include tablet{
+                font-size: 1.5rem;
+                line-height: .9375rem;
+                font-weight: 300;
+            }
                  }
         &--italic{
             font-family: "Newsreader";
@@ -27,6 +40,12 @@
             line-height:2.375rem;
             font-weight:300;
             font-style: italic;
+
+            @include tablet{
+                font-size: 3.25rem;
+                line-height: 4.125rem;
+                font-weight: 300;
+            }
                  }
     }
 }

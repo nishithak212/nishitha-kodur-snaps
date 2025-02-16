@@ -1,14 +1,26 @@
+@use '../../styles/partials/mixins' as *;
+
 .header{
     display:flex;
     justify-content: space-between;
     align-items:center;
     padding:2rem 1rem 2rem 1rem;
 
+    @include tablet{
+        padding:2rem 2.5rem 2rem 2.5rem;
+    }
+
     &__title{
         font-size:2.5rem;
         line-height: 2rem;
         font-weight:400;
         color: #0C1E1A;
+        @include tablet{
+            font-size:3rem;
+            line-height: 2.5rem;
+            font-weight: 400;
+            color:#0C1E1A;
+        }
     }
 
     &__filter-button{
@@ -25,6 +37,10 @@
         font-weight:bold;
         cursor:pointer;
         transition: all 0.3s ease-in-out;
+
+        @include tablet{
+            font-size: 1.2rem;
+        }
     }
 
     &__filter-button.active{
