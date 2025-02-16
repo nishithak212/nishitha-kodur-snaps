@@ -1,7 +1,7 @@
 import '../PhotoGallery/PhotoGallery.scss'
 import PhotoCard from "../PhotoCard/PhotoCard";
 
-const PhotoGallery = ({photos, selectedTag, onTagClick})=> {
+const PhotoGallery = ({photos, selectedTag})=> {
     const filteredPhotos = selectedTag ? photos.filter((photo) => photo.tags.includes(selectedTag)):photos;
     console.log("Photos being rendered:", filteredPhotos);
 

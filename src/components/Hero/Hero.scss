@@ -4,13 +4,31 @@
 
 
 .hero{
-    font-size:1.625rem;
-    line-height:2.375rem;
-    font-weight:400;
-    height:10rem;
+    padding:0 1rem 3rem 1rem;
+
+
+    &__text{
+        &--normal{
+            font-family: "Newsreader";
+            font-size:1.625rem;
+            line-height:2.375rem;
+            font-weight:300;
+            //height:10rem;
+                 }
+        &--small{
+            font-family: "Outfit";
+            font-size: 1rem;
+            line-height: 0.75rem;
+            font-weight: 400;
+                 }
         &--italic{
+            font-family: "Newsreader";
+            font-size:1.625rem;
+            line-height:2.375rem;
+            font-weight:300;
             font-style: italic;
-        }
-        }
+                 }
+    }
+}
  
 

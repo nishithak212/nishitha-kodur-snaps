@@ -1,0 +1,34 @@
+.filter-drawer{
+    background-color: #E4EFEC;
+    padding-bottom:1rem;
+    margin:0;
+    width:100%;
+    padding-left:1rem;
+    padding-right:1rem;
+    h3{
+        font-family: "Outfit";
+        padding-top:1rem;
+        padding-bottom:1rem;
+        font-size: 1.5rem;
+        line-height: 1.4375rem;
+        font-weight: 500;
+    }
+
+    &__tag{
+        font-family:"Outfit";
+        border:#1E6655 1.5px solid;
+        border-radius: 8px;
+        margin-right: 0.6rem;
+        margin-bottom:0.6rem;
+        color:#1E6655;
+        padding:0.5rem;
+        font-size:1rem;
+        line-height: 0.9375rem;
+        font-weight: 500;
+    }
+
+    &__tag.active{
+        color:white;
+        background-color:#1E6655 ;
+    }
+}
