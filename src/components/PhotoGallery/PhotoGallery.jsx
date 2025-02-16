@@ -9,7 +9,7 @@ const PhotoGallery = ({photos, selectedTag, onTagClick})=> {
 return (
     <div className="photo-gallery">
         {filteredPhotos.map((photo) => (
-            <PhotoCard key={photo.id} photo={photo} onTagClick={onTagClick} />
+            <PhotoCard key={photo.id} photo={photo}/>
         ) )}
     </div>
 );

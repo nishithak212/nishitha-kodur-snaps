@@ -1,21 +1,17 @@
-import '../PhotoCard/PhotoCard.scss'
+import '../PhotoCard/PhotoCard.scss';
 
-const PhotoCard = ({photo , onTagClick}) => {
+const PhotoCard = ({photo}) => {
     return(
-    <div className="photo-card">
-    <img src={photo.photo} alt={photo.photographer} className="photo-card_image" />
-    <div className="photo-card__info">
-        <h3 className="photo-card__photographer">{photo.photographer}</h3>
-        <div className="photo-card__tags">
-            {photo.tags.map((tag)=>(
-                <span key={tag} className="photo-card__tag" onClick={() => onTagClick(tag)}
-                >
-                    {tag}
-                </span>
-            ))}
-        </div>
-    </div>
-</div>
-    );
+<div className="photo-card">
+  <div className="photo-card__image-wrapper">
+    <img src={photo.photo} alt={photo.photographer} className="photo-card__image" />
+    <div className="photo-card__photographer">{photo.photographer}</div>
+  </div>
+  <div className="photo-card__tags">
+    {photo.tags.map((tag, index) => (
+      <span key={index} className="photo-card__tag">{tag}</span>
+    ))}
+  </div>
+</div>);
 };
 export default PhotoCard;
