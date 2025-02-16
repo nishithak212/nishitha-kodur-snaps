@@ -10,6 +10,14 @@
 @include tablet{
     padding:0 2.5rem 4.25rem 2.5rem;
 }
+
+@include desktop{
+    display: flex;
+    justify-content: flex-end;
+    width:30%;
+    height: 100%;
+    float: right;
+}
     
     h3{
         font-family: "Outfit";

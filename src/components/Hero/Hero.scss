@@ -8,6 +8,10 @@
 @include tablet{
     padding:0 2.5rem 4.5rem 2.5rem;
 }
+@include desktop{
+    width:60%;
+    padding-top:66px;
+}
 
     &__text{
         &--normal{

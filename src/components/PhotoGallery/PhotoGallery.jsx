@@ -3,7 +3,7 @@ import PhotoCard from "../PhotoCard/PhotoCard";
 
 const PhotoGallery = ({photos, selectedTag})=> {
     const filteredPhotos = selectedTag ? photos.filter((photo) => photo.tags.includes(selectedTag)):photos;
-    console.log("Photos being rendered:", filteredPhotos);
+   // console.log("Photos being rendered:", filteredPhotos);
 
 
 return (

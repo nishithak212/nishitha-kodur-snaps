@@ -11,7 +11,7 @@
 
 //Mixin for desktop
 @mixin desktop{
-    @media scree and (min-width:$desktop-breakpointmin){
+    @media screen and (min-width:$desktop-breakpointmin){
         @content;
     }
 }
