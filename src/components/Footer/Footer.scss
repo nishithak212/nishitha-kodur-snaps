@@ -2,129 +2,135 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.footer{
-    display:flex;
-    flex-direction:column;
+.footer {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding:2rem;
+    padding: 2rem;
     margin-top: 3.25rem;
 
-    @include tablet{
-        padding:0 2.5rem 0 2.5rem;
+    @include tablet {
+        padding: 0 2.5rem 0 2.5rem;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
     }
 
-    &__title{
-        font-family:"Newsreader";
+    &__title {
+        font-family: "Newsreader";
         font-size: 2rem;
         margin-bottom: 0;
-        padding-bottom:1.5rem;
+        padding-bottom: 1.5rem;
 
-        @include tablet{
+        @include tablet {
             font-size: 2.5rem;
-            padding-top:0;
-            flex:1;
+            padding-top: 0;
+            flex: 1;
             align-content: baseline;
             margin-bottom: 11.125rem;
         }
     }
-    &__details{
-        display:flex;
+
+    &__details {
+        display: flex;
         flex-direction: column;
-        @include tablet{
-            flex-direction:row;
+
+        @include tablet {
+            flex-direction: row;
             justify-content: space-between;
-            width:30%;
-            
+            width: 30%;
+
         }
 
-        @include desktop{
+        @include desktop {
             width: 50%;
         }
-        &--services{
+
+        &--services {
             list-style: none;
             font-family: "Outfit";
-            padding-bottom:1.5rem;
+            padding-bottom: 1.5rem;
             line-height: 1.4rem;
-            flex-direction: column;  
+            flex-direction: column;
 
-            @include tablet{
+            @include tablet {
                 font-size: 1rem;
                 line-height: 1.5rem;
                 font-weight: 500;
                 flex-direction: column;
-                flex:1;
-                width:100%
+                flex: 1;
+                width: 100%
             }
 
-            @include desktop{
-                padding-left:17.25rem;
+            @include desktop {
+                padding-left: 17.25rem;
             }
         }
-            &--support{
-                list-style: none;
-                font-family: "Outfit";
-                padding-bottom:1.5rem;
-                line-height: 1.4rem;
-                flex-direction: column;  
-    
-                @include tablet{
-                    font-size: 1rem;
-                    line-height: 1.5rem;
-                    font-weight: 500;
-                    flex-direction: column;
-                    flex:1;
-                    width:100%;
-                    padding-left:5.625rem;
-                }
-                @include desktop{
-                    padding-left:3.0625rem;
-                }
+
+        &--support {
+            list-style: none;
+            font-family: "Outfit";
+            padding-bottom: 1.5rem;
+            line-height: 1.4rem;
+            flex-direction: column;
+
+            @include tablet {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                font-weight: 500;
+                flex-direction: column;
+                flex: 1;
+                width: 100%;
+                padding-left: 5.625rem;
             }
 
-            
-        
+            @include desktop {
+                padding-left: 3.0625rem;
+            }
+        }
+
+
+
     }
 
-    &__list{
-        &--social{
-            display:flex;
+    &__list {
+        &--social {
+            display: flex;
             list-style: none;
             flex-direction: row;
-            width:30%;
+            width: 30%;
             justify-content: space-between;
-            padding-bottom:1.5rem;
+            padding-bottom: 1.5rem;
 
-            @include tablet{
-                justify-content:flex-start;
-                width:100%;
-                margin-top:0;
-                gap:1.3rem;
-            }
-
-            @include desktop{
-                width:13%;
-            }
-        }
-        &--watermark{
-            font-family:"Outfit";
-            color:#1E6655;
-            opacity: 50%;
-            display:flex;
-            list-style: none;
-            flex-direction: row;
-            width:50%;
-            justify-content: space-between;
-
-            @include tablet{
-                width:100%;
+            @include tablet {
                 justify-content: flex-start;
-                gap:0.8rem;
-                margin-bottom:3.5rem;
+                width: 100%;
+                margin-top: 0;
+                gap: 1.3rem;
+            }
+
+            @include desktop {
+                width: 13%;
             }
         }
-}
+
+        &--watermark {
+            font-family: "Outfit";
+            color: #1E6655;
+            opacity: 50%;
+            display: flex;
+            list-style: none;
+            flex-direction: row;
+            width: 50%;
+            justify-content: space-between;
+
+            @include tablet {
+                width: 100%;
+                justify-content: flex-start;
+                gap: 0.8rem;
+                margin-bottom: 3.5rem;
+            }
+        }
+    }
 
 }

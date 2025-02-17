@@ -3,18 +3,18 @@
 
 *,
 *::before,
-*::after{
-    box-sizing:border-box;
+*::after {
+    box-sizing: border-box;
 }
 
-h1{
+h1 {
     font-size: $font-size-WordmarkM;
     font-family: "Newsreader";
     font-weight: $font-weight-WordmarkM;
     line-height: $line-height-WordmarkM;
-    padding-top:1.5rem;
+    padding-top: 1.5rem;
 }
 
-body{
+body {
     background-color: $primary-pistachio;
 }

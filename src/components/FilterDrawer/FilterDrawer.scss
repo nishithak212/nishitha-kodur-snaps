@@ -1,93 +1,98 @@
-@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/mixins" as *;
 
-.filter-drawer{
-    background-color: #E4EFEC;
-    padding-bottom:1rem;
-    margin:0;
-    width:100%;
-    padding-left:1rem;
-    padding-right:1rem;
-@include tablet{
-    padding:0 2.5rem 4.25rem 2.5rem;
-}
+.filter-drawer {
+    background-color: #e4efec;
+    padding-bottom: 1rem;
+    margin: 0;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-@include desktop{
-    &.filter-open{
-        >*{
+    @include tablet {
+        padding: 0 2.5rem 4.25rem 2.5rem;
+    }
+
+    @include desktop {
+        position: absolute;
+        top: 12.1875rem;
+        right: -1.375rem;
+        width: 33%;
+        background-color: #e4efec;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        padding: 2rem;
+        z-index: 1000;
+
+        &.filter-open {
+            transform: translateX(0);
+        }
+    }
+
+    &__contents {
+        @include desktop {
             display: flex;
             flex-direction: column;
-           //justify-content: flex-start;
-           justify-content: flex-start;
-           //width:auto;
-           //height:100vh;
-           align-items: flex-end;
-           //position:absolute;
-           //right:0;
-           //top:0;
-           //z-index:1000;
-          // height: 100%;
-            //float:right;
+            align-items: flex-start;
         }
-        
-}
-}
 
-@include desktop{
-    // display: flex;
-    // justify-content: flex-end;
-    //width:30%;
-    // height: 100%;
-    // float: right;
-
-}
-
-    &__contents{
-       // display: flex;
-        
-       @include desktop{
-        //display:flex;
-        //justify-content: space-between;
-    }
-        &--title{
-        font-family: "Outfit";
-        padding-top:1rem;
-        padding-bottom:1rem;
-        font-size: 1.5rem;
-        line-height: 1.4375rem;
-        font-weight: 500;
-
-        @include tablet ; @include desktop{
-            font-size: 2rem;
-            line-height: 1.625rem;
+        &--title {
+            font-family: "Outfit";
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 1.5rem;
+            line-height: 1.4375rem;
             font-weight: 500;
-            padding-top: 2.5rem;
-            padding-bottom: 2.5rem;
+
+            @include tablet;
+
+            @include desktop {
+                font-size: 2rem;
+                line-height: 1.625rem;
+                font-weight: 500;
+                padding-top: 2.5rem;
+                padding-bottom: 3.125rem;
+                padding-left:1.5rem;
+            }
         }
-        
-     }
     }
 
-    &__contents--tag{
-        font-family:"Outfit";
-        border:#1E6655 1.5px solid;
+    &__contents--tags {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.1rem;
+            padding-left:1.5rem;
+        }
+    }
+
+    &__contents--tag {
+        font-family: "Outfit";
+        border: #1e6655 1.5px solid;
         border-radius: 8px;
         margin-right: 0.6rem;
-        margin-bottom:0.6rem;
-        color:#1E6655;
-        padding:0.5rem;
-        font-size:1rem;
+        margin-bottom: 0.6rem;
+        color: #1e6655;
+        padding: 0.5rem;
+        font-size: 1rem;
         line-height: 0.9375rem;
         font-weight: 500;
 
-        @include tablet{
-            font-size:1.15rem;
+        @include tablet {
+            font-size: 1.15rem;
+            line-height: 1.0938rem;
+            font-weight: 500;
+        }
+
+        @include desktop {
+            font-size: 1.15rem;
             line-height: 1.0938rem;
             font-weight: 500;
         }
     }
 
-    &__contents--tag.active{
-        color:white;
-        background-color:#1E6655 ;
+    &__contents--tag.active {
+        color: white;
+        background-color: #1e6655;
     }
 }
