@@ -5,16 +5,18 @@ export default function Footer() {
     return(
         <footer className="footer">
             <h1 className="footer__title">Snaps</h1>
-        <ul className="footer__list footer__list--services">
+            <div className="footer__details">
+        <ul className="footer__details footer__details--services">
             <li className="footer__item">For Photographers</li>
             <li className="footer__item">Hire Talent</li>
             <li className="footer__item">Inspiration</li>
         </ul>
-        <ul className="footer__list footer__list--support">
+        <ul className="footer__details footer__details--support">
             <li className="footer__item">About</li>
             <li className="footer__item">Careers</li>
             <li className="footer__item">Support</li>
         </ul>
+        </div>
             <ul className="footer__list footer__list--social">
                 <li className="footer__item">
                     <svg
