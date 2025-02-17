@@ -25,9 +25,9 @@ function App() {
   return (
     <div className="app">
       <Header toggleFilterDrawer={toggleFilterDrawer} isFilterOpen={isFilterOpen} />
-      {isFilterOpen && (<FilterDrawer selectedTag={selectedTag} onTagSelect={handleTagClick} tags={tagsData}/>)}
+      {isFilterOpen && (<FilterDrawer selectedTag={selectedTag} onTagSelect={handleTagClick} tags={tagsData} isFilterOpen={isFilterOpen}/>)}
       <Hero />
-      <PhotoGallery photos={photosData} selectedTag={selectedTag}/>
+      <PhotoGallery photos={photosData} selectedTag={selectedTag} isFilterOpen={isFilterOpen}/>
       <Footer />
     </div>
   );

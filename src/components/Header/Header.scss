@@ -38,9 +38,24 @@
         font-weight:bold;
         cursor:pointer;
         transition: all 0.3s ease-in-out;
+        text-align: center;
+            width:7.5rem;
+            display: flex;
+            justify-content: space-evenly;
 
         @include tablet{
-            font-size: 1.2rem;
+            font-size: 0.875rem;
+            text-align: center;
+            width:7.5rem;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        @include desktop{
+            font-size: 0.875rem;
+            text-align: center;
+            width:7.5rem;
+            display: flex;
+            justify-content: space-evenly;
         }
     }
 
@@ -55,6 +70,7 @@
 
     &__filter-button.active path{
         stroke:white;
+        fill:white;
     }
 
     &__filter-icon path{
