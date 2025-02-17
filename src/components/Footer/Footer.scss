@@ -2,28 +2,20 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.footer,
-.footer::before,
-.footer::after{
-    box-sizing:border-box;
-    padding-left:1rem;   
-    margin-top: 3.25rem;
-
-    @include tablet{
-        padding:0 2.5rem 0 2.5rem;
-    }
-}
-
 .footer{
     display:flex;
     flex-direction:column;
     justify-content: space-between;
     padding:2rem;
+    margin-top: 3.25rem;
 
-@include tablet{
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+    @include tablet{
+        padding:0 2.5rem 0 2.5rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
     &__title{
         font-family:"Newsreader";
         font-size: 2rem;
@@ -32,16 +24,19 @@
 
         @include tablet{
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            padding-bottom:2rem;
+            padding-top:0;
+            flex:1;
+            align-content: baseline;
+            margin-bottom: 11.125rem;
         }
     }
-    &__list{
-
+    &__details{
+        display:flex;
+        flex-direction: column;
         @include tablet{
-            display: flex;
             flex-direction:row;
             justify-content: space-between;
+            width:30%;
             
         }
         &--services{
@@ -49,27 +44,40 @@
             font-family: "Outfit";
             padding-bottom:1.5rem;
             line-height: 1.4rem;
-            gap:1rem;
             flex-direction: column;  
 
             @include tablet{
+                font-size: 1rem;
+                line-height: 1.5rem;
+                font-weight: 500;
                 flex-direction: column;
-                gap:1rem
+                flex:1;
+                width:100%
             }
         }
-        &--support{
-            list-style:none;
-            font-family: "Outfit";
-            padding-bottom:1.5rem;
-            line-height: 1.4rem;
-            gap:1rem;
-            flex-direction: column;
+            &--support{
+                list-style: none;
+                font-family: "Outfit";
+                padding-bottom:1.5rem;
+                line-height: 1.4rem;
+                flex-direction: column;  
+    
+                @include tablet{
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    font-weight: 500;
+                    flex-direction: column;
+                    flex:1;
+                    width:100%;
+                    padding-left:5.625rem;
+                }
+            }
 
-            @include tablet{
-                flex-direction: column;
-                gap:1rem
-            }
-        }
+            
+        
+    }
+
+    &__list{
         &--social{
             display:flex;
             list-style: none;
@@ -79,9 +87,10 @@
             padding-bottom:1.5rem;
 
             @include tablet{
-                justify-content:flex-end;
-                width:auto;
-                margin-top:0; 
+                justify-content:flex-start;
+                width:100%;
+                margin-top:0;
+                gap:1.3rem;
             }
         }
         &--watermark{
@@ -96,8 +105,11 @@
 
             @include tablet{
                 width:100%;
-                justify-content: flex-end;
+                justify-content: flex-start;
+                gap:0.8rem;
+                margin-bottom:3.5rem;
             }
         }
-    }
+}
+
 }
