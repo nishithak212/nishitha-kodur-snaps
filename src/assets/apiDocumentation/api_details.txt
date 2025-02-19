@@ -1,0 +1,2 @@
+API Base URL: https://unit-3-project-c5faaab51857.herokuapp.com/
+API Key: 03cdedfd-0163-4902-a24f-800377492629
