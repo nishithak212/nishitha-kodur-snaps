@@ -1,8 +1,10 @@
 import "./Footer.scss";
+import facebookIcon from '../../assets/Icons/Facebook.svg';
 
 export default function Footer() {
   return (
     <footer className="footer">
+      <img src={facebookIcon} alt="facebook"/>
       <h1 className="footer__title">Snaps</h1>
       <div className="footer__details">
         <ul className="footer__details footer__details--services">

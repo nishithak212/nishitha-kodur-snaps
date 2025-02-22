@@ -7,6 +7,8 @@ import FilterDrawer from "./components/FilterDrawer/FilterDrawer";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
 import Hero from "./components/Hero/Hero";
 import Footer from "./components/Footer/Footer";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
 
 function App() {
   const [selectedTag, setSelectedTag] = useState(null);
@@ -24,6 +26,8 @@ function App() {
 
   return (
     <div className="app">
+      <BrowserRouter> 
+      </BrowserRouter>
       <Header
         toggleFilterDrawer={toggleFilterDrawer}
         isFilterOpen={isFilterOpen}
