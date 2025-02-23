@@ -1,8 +1,10 @@
 import {useEffect, useState} from "react";
-import {useParams, Link} from "react-router-dom"
+import {useParams, Link} from "react-router-dom";
 import axios from "axios";
 import "./PhotoDetails.scss";
 import Header from "../../components/Header/Header";
+import like from "../../assets/Icons/Like_Outline.svg";
+import Comments from "../../components/Comments/Comments";
 //import arrowIcon from "../../assets/Icons/Arrow.svg";
 
 
@@ -31,16 +33,19 @@ const PhotoDetails=()=>{
 
    return( 
     <>
-    <h1>This is Photo Details page</h1> 
+    {/* <h1>This is Photo Details page</h1>  */}
     <Header isPhotoPage />
     <div className="photo-details">
         <img src={photo.photo} alt={photo.photoDescription} className="photo-details__image"/>
-        <h2 className="photo-details__photograpger">{photo.photographer}</h2>
         <div className="photo-details__tags">
             {photo.tags.map((tag,index)=>(
                 <span key={index} className="photo-details__tag">{tag}</span>
             ))}
         </div>
+        <p className="photo-details__likes"><img src={like} alt="likeIcon-outline"/> {photo.likes} likes </p>
+        <p className="photo-details__timestamp">{photo.timestamp}</p>
+        <h2 className="photo-details__photograpger">Photo by {photo.photographer}</h2>
+        <Comments />
         {/* <Link to="/" className="photo-details__return-to-home"><img src={arrowIcon} alt="arrow-icon"/>Home</Link> */}
     </div>
     </>
