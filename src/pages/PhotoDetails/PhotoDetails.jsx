@@ -3,7 +3,7 @@ import {useParams, Link} from "react-router-dom"
 import axios from "axios";
 import "./PhotoDetails.scss";
 import Header from "../../components/Header/Header";
-import arrowIcon from "../../assets/Icons/Arrow.svg";
+//import arrowIcon from "../../assets/Icons/Arrow.svg";
 
 
 const PhotoDetails=()=>{
@@ -35,15 +35,13 @@ const PhotoDetails=()=>{
     <Header isPhotoPage />
     <div className="photo-details">
         <img src={photo.photo} alt={photo.photoDescription} className="photo-details__image"/>
-        <h2 className="photo-details__photographer">{photo.photographer}</h2>
-        <p className="photo-details__likes">{photo.likes}</p>
-        <p className="photo-details__timestamp">{photo.timestamp}</p>
+        <h2 className="photo-details__photograpger">{photo.photographer}</h2>
         <div className="photo-details__tags">
             {photo.tags.map((tag,index)=>(
                 <span key={index} className="photo-details__tag">{tag}</span>
             ))}
         </div>
-        <Link to="/" className="photo-details__return-to-home">{arrowIcon} Home</Link>
+        {/* <Link to="/" className="photo-details__return-to-home"><img src={arrowIcon} alt="arrow-icon"/>Home</Link> */}
     </div>
     </>
    
