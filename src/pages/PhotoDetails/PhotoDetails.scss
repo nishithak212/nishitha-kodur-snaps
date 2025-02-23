@@ -25,6 +25,11 @@
       width:95%;
     }
 
+    @include desktop{
+      width:70%;
+      margin-right:12.0625rem;
+      margin-left:12.0625rem;
+    }
  &__image{
     border-top-left-radius: 0.75rem;
     border-top-right-radius:0.75rem;
