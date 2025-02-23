@@ -12,7 +12,7 @@ const Header = ({ toggleFilterDrawer, isFilterOpen}) => {
       <div className="header__content">
       <h1 className="header__title">Snaps</h1>
       {isPhotoPage ? (
-        <Link to ="/" className="header__back">{arrowIcon} Home</Link>
+        <Link to ="/" className="header__back"><img src={arrowIcon} alt="arrow-icon"/>Home</Link>
       ): (
       <button
         className={`header__filter-button ${isFilterOpen ? "active" : ""}`}
