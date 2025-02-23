@@ -35,7 +35,9 @@ const PhotoDetails=()=>{
     <Header isPhotoPage />
     <div className="photo-details">
         <img src={photo.photo} alt={photo.photoDescription} className="photo-details__image"/>
-        <h2 className="photo-details__photograpger">{photo.photographer}</h2>
+        <h2 className="photo-details__photographer">{photo.photographer}</h2>
+        <p className="photo-details__likes">{photo.likes}</p>
+        <p className="photo-details__timestamp">{photo.timestamp}</p>
         <div className="photo-details__tags">
             {photo.tags.map((tag,index)=>(
                 <span key={index} className="photo-details__tag">{tag}</span>
