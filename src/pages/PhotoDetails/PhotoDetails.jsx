@@ -37,17 +37,19 @@ const PhotoDetails=()=>{
     <Header isPhotoPage />
     <div className="photo-details">
         <img src={photo.photo} alt={photo.photoDescription} className="photo-details__image"/>
+       
         <div className="photo-details__tags">
             {photo.tags.map((tag,index)=>(
                 <span key={index} className="photo-details__tag">{tag}</span>
             ))}
         </div>
+        <div className="photo-details__wrapper">
         <p className="photo-details__likes"><img src={like} alt="likeIcon-outline"/> {photo.likes} likes </p>
-        <p className="photo-details__timestamp">{photo.timestamp}</p>
-        <h2 className="photo-details__photograpger">Photo by {photo.photographer}</h2>
-        <Comments />
-        {/* <Link to="/" className="photo-details__return-to-home"><img src={arrowIcon} alt="arrow-icon"/>Home</Link> */}
-    </div>
+        <p className="photo-details__timestamp">{new Date(photo.timestamp).toLocaleDateString("en-US")}</p>
+        </div>
+        <h4 className="photo-details__photographer">Photo by {photo.photographer}</h4>
+        </div>
+        <Comments />   
     </>
    
 );

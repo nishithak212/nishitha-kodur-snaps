@@ -8,6 +8,7 @@ function Comments(){
     let [name, setName] = useState("");
     let  [comment, setComment] = useState("");
     const [commentsList, setCommentsList] = useState([]); //to store fetched comments
+    const [errors, setErrors] = useState({name:false, comment:false});
 
     const API_URL="https://unit-3-project-c5faaab51857.herokuapp.com";
     const API_KEY="?api_key=03cdedfd-0163-4902-a24f-800377492629";
@@ -27,15 +28,20 @@ const formattedComments = comments.map(comment=>({
                 setCommentsList(formattedComments.reverse());
             } catch (error){
                 console.error("Error fetching comments:",error);
-                alert("Failed to load comments");
+                //alert("Failed to load comments");
             }
         };
         fetchComments();
-    },[]);
+    },[id]);
 
-    const handleChangeName=(event)=>setName(event.target.value);
-
-    const handleChangeComment=(event)=>setComment(event.target.value);
+    const handleChangeName=(event)=> {
+        setName(event.target.value);
+        setErrors((prev) => ({...prev, name:event.target.value.trim() === ""}));
+    };
+    const handleChangeComment=(event)=>{
+        setComment(event.target.value);
+        setErrors((prev) => ({...prev, comment: event.target.value.trim() === ""}));
+    };
 
     //Validation
 
@@ -46,11 +52,11 @@ const handleSubmit=async (event) => {
     event.preventDefault();
 
     if(!isFormValid()){
-        alert("Failed to submit comment, please fill all the fields");
+        setErrors({name: name.trim() === "", comment: comment.trim()===""});
+       // alert("Failed to submit comment, please fill all the fields");
         return;
     }
     try{
-       // const newComment ={name , text:comment, date: new Date().toLocaleDateString("en-US")};
        const newComment ={name , comment};
        const response = await axios.post(`${API_URL}/photos/${id}/comments/${API_KEY}`,newComment);
        const commentWithDate={
@@ -63,15 +69,16 @@ const handleSubmit=async (event) => {
         setCommentsList((prevComments)=>[commentWithDate, ...prevComments]);
         setName("");
         setComment("");
+        setErrors({name:false, comment:false,}); //to reset error state
     } catch(error) {
         console.error("Error submitting comment:",error);
-        alert("Failed to submit comment, please try again.");
+       // alert("Failed to submit comment, please try again.");
     }
 };
 
 return (
     <div className="comments">
-    <form onSubmit={handleSubmit} className="comments_form">
+    <form onSubmit={handleSubmit} className="comments__form">
         <label>
             Name
             <input
@@ -79,7 +86,7 @@ return (
             name="name"
             onChange={handleChangeName}
             value={name}
-            className="comment__input" required
+            className={`comments__input ${errors.name ? "error" : ""}`}
             />
         </label>
         <label>
@@ -87,17 +94,21 @@ return (
             <textarea
             onChange={handleChangeComment}
             value={comment}
-            className="comment__input" required
+            className={`comments__input comments__input--comment ${errors.name ? "error" : ""}`}
             />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit" className="comments__submit">Submit</button>
     </form>
     <div className="comments__list">
-        <h3>{commentsList.length} Comments</h3>
-        <ul>
+        <h3 className="comments__title">{commentsList.length} Comments</h3>
+        <ul className="comments__display">
             {commentsList.map((c)=>(
-                <li key={c.id}>
-                    <strong>{c.name}</strong>{c.date} {c.comment}
+                <li key={c.id} className="comments__item">
+                    <div className="comments__header">
+                    <p className="comments__display--name">{c.name}</p>
+                    <p classame="comments__display--date">{c.date}</p>
+                    </div>
+                    <p className="comments__display--commenttext">{c.comment}</p>
                 </li>
             ))}
         </ul>
