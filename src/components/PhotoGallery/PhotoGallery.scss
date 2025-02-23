@@ -30,7 +30,6 @@
             }
             &.filter-open{
                 >*{
-                    //position: relative;
                     justify-content: flex-start;
                     flex:1 1 calc(50% - 1rem);
                     max-width: calc(35% - 1rem);

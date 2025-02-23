@@ -1,11 +1,10 @@
 import {useEffect, useState} from "react";
-import {useParams, Link} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import axios from "axios";
 import "./PhotoDetails.scss";
 import Header from "../../components/Header/Header";
 import like from "../../assets/Icons/Like_Outline.svg";
 import Comments from "../../components/Comments/Comments";
-//import arrowIcon from "../../assets/Icons/Arrow.svg";
 
 
 const PhotoDetails=()=>{
@@ -33,7 +32,6 @@ const PhotoDetails=()=>{
 
    return( 
     <>
-    {/* <h1>This is Photo Details page</h1>  */}
     <Header isPhotoPage />
     <div className="photo-details">
         <img src={photo.photo} alt={photo.photoDescription} className="photo-details__image"/>
@@ -47,7 +45,7 @@ const PhotoDetails=()=>{
         <p className="photo-details__likes"><img src={like} alt="likeIcon-outline"/> {photo.likes} likes </p>
         <p className="photo-details__timestamp">{new Date(photo.timestamp).toLocaleDateString("en-US")}</p>
         </div>
-        <h4 className="photo-details__photographer">Photo by {photo.photographer}</h4>
+        <p className="photo-details__photographer">Photo by {photo.photographer}</p>
         </div>
         <Comments />   
     </>

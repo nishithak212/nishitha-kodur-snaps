@@ -21,6 +21,9 @@
     gap:1rem;
     margin:0 2rem 0 2rem ;
     
+    @include tablet{
+      width:95%;
+    }
 
  &__image{
     border-top-left-radius: 0.75rem;
