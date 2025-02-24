@@ -1,40 +1,43 @@
 @use '../../styles/partials/mixins' as *;
 
-.photo-gallery{
+.photo-gallery {
     border-radius: 0.5;
     padding: 0 1rem 0 1rem;
 
-    @include tablet{
-        display:flex;
+    @include tablet {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap:2rem;
+        gap: 2rem;
         justify-content: center;
-        padding:0 2.5rem;
+        padding: 0 2.5rem;
 
-        > *{
-            flex:1 1 calc(50% - 1rem);
-           max-width: calc(50% - 1rem);
+        >* {
+            flex: 1 1 calc(50% - 1rem);
+            max-width: calc(50% - 1rem);
         }
     }
-        @include desktop{
-            display:flex;
+
+    @include desktop {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap:1.5rem;
-       justify-content: flex-start;
-        padding:0 2.5rem;
-            > *{
-                flex:1 1 calc(33% - 1rem);
-               max-width: calc(33% - 1rem);
+        gap: 1.5rem;
+        justify-content: flex-start;
+        padding: 0 2.5rem;
+
+        >* {
+            flex: 1 1 calc(33% - 1rem);
+            max-width: calc(33% - 1rem);
+        }
+
+        &.filter-open {
+            >* {
+                justify-content: flex-start;
+                flex: 1 1 calc(50% - 1rem);
+                max-width: calc(35% - 1rem);
+
             }
-            &.filter-open{
-                >*{
-                    justify-content: flex-start;
-                    flex:1 1 calc(50% - 1rem);
-                    max-width: calc(35% - 1rem);
-                    
-                }
-            }
-        }      
+        }
+    }
 }

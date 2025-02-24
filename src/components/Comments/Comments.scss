@@ -2,129 +2,154 @@
 @use '../../styles/partials/typography' as *;
 @use '../../styles/partials/mixins' as *;
 
-.comments{
-    padding:1.5rem 3rem 1.5rem 1.5rem;
+.comments {
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
     border-radius: 0.75rem;
     max-width: 50rem;
-    margin:2rem auto;
+    margin: 2rem auto;
 
-    @include tablet{
-        margin:1rem;
-        max-width:100%;
-        padding-left:1.5rem;
-        padding-right:1.5rem;
+    @include tablet {
+        margin: 4.375rem 1rem 1rem 1rem;
+        max-width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
-    @include desktop{
-        width:70%;
-      margin-right:12.0625rem;
-      margin-left:12.0625rem;
-      padding-left:0;
-      padding-right:0;
+    @include desktop {
+        width: 70%;
+        margin-right: 12.0625rem;
+        margin-left: 12.0625rem;
+        padding-left: 0;
+        padding-right: 0;
     }
-    &__form{
-        display:flex;
+
+    &__form {
+        display: flex;
         flex-direction: column;
-        gap:1rem;
+        gap: 1rem;
+
+        @include tablet {
+            gap: 0.5rem;
+        }
     }
 
-    label{
+    label {
         font-family: "Outfit";
         font-weight: bold;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+
+        @include tablet {
+            font-size: 1.45rem;
+            line-height: 1.625rem;
+        }
     }
 
-    &__input{
-        width:100%;
-        padding:0.5rem;
-        border:2px solid $secondary-seaGreen;
-        border-radius: 0.5rem;
-        font-size:1rem;
+    &__input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 2px solid $secondary-seaGreen;
+        border-radius: 0.8rem;
+        font-size: 1rem;
         margin-top: 0.5rem;
+        margin-bottom: 2rem;
         font-family: "Outfit";
         transition: border 0.3s ease;
 
-        &:focus{
-            border: 2px solid #1E6655; //active state
-            outline:none;
+        @include tablet {
+            margin-bottom: 1rem;
         }
 
-        &.error{
+        &:focus {
+            border: 2px solid #1E6655; //active state
+            outline: none;
+        }
+
+        &.error {
             border: 2px solid #B10606; //error state
         }
 
-        &--comment{
-            height:8rem;
+        &--comment {
+            height: 8rem;
         }
     }
 
-    &__submit{
-        height:2.375rem;
-        width:5rem;
-        align-self:flex-end;
-        border-radius: 0.5rem;
-        background-color:  #1E6655;
+    &__submit {
+        height: 2.8rem;
+        width: 7rem;
+        align-self: flex-end;
+        border-radius: 1rem;
+        background-color: #1E6655;
         border: 2px solid #1E6655;
         color: $secondary-white;
         box-shadow: none;
         font-family: "Outfit";
+        font-size: 1.125rem;
+        padding: 0.2rem;
+        margin-bottom: 1.25rem;
+
+        @include tablet {
+            height: 3.2rem;
+            width: 7.8rem;
+            font-size: 1.28rem;
+
+        }
     }
 
-    &__list{
-        margin-top:1.5rem;
+    &__list {
+        margin-top: 1.5rem;
         font-family: "Outfit";
     }
-&__title{
-    font-family: "outfit";
-    padding-bottom:1rem;
-    border-bottom:2px solid  #B7CEC9;
-}
 
-&__display{
-    list-style-type:none;
-    padding:0;
-    color:#1E6655;
+    &__title {
+        font-family: "outfit";
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #B7CEC9;
 
-}
-
-&__item{
-    padding:1rem 0;
-    border-bottom: 2px solid #B7CEC9;
-}
-
-&__header{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    margin-bottom:1rem;
-}
-
-&__display{
-    &--name{
-        font-weight:bold;
-        color:#1E6655;
+        @include tablet {
+            font-size: 1.5rem;
+        }
     }
-    &--date{
-    color:#1E6655;
-    font-weight: bold;
+
+    &__display {
+        list-style-type: none;
+        padding: 0;
+        color: #1E6655;
+
     }
-    &--commenttext{
-        color:black;
-        font-size:1.1rem;
-        //font-weight: bold;
+
+    &__item {
+        padding: 1rem 0;
+        border-bottom: 2px solid #B7CEC9;
     }
-}
 
-//     &--commenttext{
-//         color:black;
-//     }
-// }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
 
-// li{
-//     padding:1rem 0;
-//     border-bottom:2px solid  #B7CEC9;
-//     display:flex;
-//     justify-content: space-between;
-// }
+    &__display {
+        &--name {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #1E6655;
+        }
 
+        &--date {
+            color: #1E6655;
+            font-weight: bolder;
+            font-size: 1.125rem;
+        }
 
+        &--commenttext {
+            color: black;
+            font-size: 1.1rem;
+
+            @include tablet {
+                font-size: 1.4rem;
+            }
+        }
+    }
 }

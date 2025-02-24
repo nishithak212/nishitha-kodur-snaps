@@ -3,93 +3,93 @@
 
 .header {
 
-    .header__content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-
-    @include tablet {
-        padding: 2rem 2.5rem 3rem 2.5rem;
-    }
-
-
-    .header__title {
-        font-size: 2.5rem;
-        line-height: 2rem;
-        font-weight: 400;
-        color: #0C1E1A;
-        padding-top:0;
+    .header__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.8125rem 2rem;
 
         @include tablet {
-            font-size: 3rem;
-            line-height: 2.5rem;
+            padding: 2rem 2.5rem 3rem 2.5rem;
+        }
+
+
+        .header__title {
+            font-size: 2.5rem;
+            line-height: 2rem;
             font-weight: 400;
             color: #0C1E1A;
+            padding-top: 0;
+
+            @include tablet {
+                font-size: 3rem;
+                line-height: 2.5rem;
+                font-weight: 400;
+                color: #0C1E1A;
+            }
         }
-    }
 
-    .header__back{
-        align-self: anchor-center;
-        text-decoration: none;
-        font-family: "Outfit";
-        color:#1E6655;
-        font-size:1.5rem;
-    }
+        .header__back {
+            align-self: anchor-center;
+            text-decoration: none;
+            font-family: "Outfit";
+            color: #1E6655;
+            font-size: 1.5rem;
+        }
 
-    .header__filter-button {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        gap: 0.5rem;
-        background: transparent;
-        border: 2px solid #1E6655;
-        color: #1E6655;
-        padding: 0.5rem 1rem;
-        border-radius: 1.5rem;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        text-align: center;
-        width: 7.5rem;
-        display: flex;
-        justify-content: space-evenly;
-
-        @include tablet {
-            font-size: 0.875rem;
+        .header__filter-button {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem;
+            background: transparent;
+            border: 2px solid #1E6655;
+            color: #1E6655;
+            padding: 0.5rem 1rem;
+            border-radius: 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
             text-align: center;
             width: 7.5rem;
             display: flex;
             justify-content: space-evenly;
+
+            @include tablet {
+                font-size: 0.875rem;
+                text-align: center;
+                width: 7.5rem;
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            @include desktop {
+                font-size: 0.875rem;
+                text-align: center;
+                width: 7.5rem;
+                display: flex;
+                justify-content: space-evenly;
+            }
         }
 
-        @include desktop {
-            font-size: 0.875rem;
-            text-align: center;
-            width: 7.5rem;
-            display: flex;
-            justify-content: space-evenly;
+        .header__filter-button.active {
+            background: #1E6655;
+            color: white;
         }
-    }
 
-    .header__filter-button.active {
-        background: #1E6655;
-        color: white;
-    }
+        .header__filter-icon {
+            transition: stroke 0.3s ease-in-out;
+        }
 
-    .header__filter-icon {
-        transition: stroke 0.3s ease-in-out;
-    }
+        .header__filter-button.active path {
+            stroke: white;
+            fill: white;
+        }
 
-    .header__filter-button.active path {
-        stroke: white;
-        fill: white;
-    }
+        .header__filter-icon path {
+            stroke: #1E6655;
+        }
 
-    .header__filter-icon path {
-        stroke: #1E6655;
     }
-
-}
 }

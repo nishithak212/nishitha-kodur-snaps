@@ -38,7 +38,7 @@
     font-weight: medium;
     font-size: 16px;
     font-family: "Outfit";
-    color:black;
+    color: black;
   }
 
 
@@ -55,8 +55,9 @@
     background-color: $secondary-sage ;
     font-family: "Outfit";
     text-decoration: none;
-    color:black;
+    color: black;
   }
+
   &__tag {
     background: $secondary-white;
     padding: 0.375rem 0.75rem;
@@ -66,5 +67,5 @@
     font-weight: light;
     text-decoration: none;
   }
-  
+
 }
