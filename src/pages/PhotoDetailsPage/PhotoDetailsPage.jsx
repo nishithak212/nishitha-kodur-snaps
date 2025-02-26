@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import "./PhotoDetails.scss";
+import "./PhotoDetailsPage.scss";
 import Header from "../../components/Header/Header";
 import like from "../../assets/Icons/Like_Outline.svg";
 import Comments from "../../components/Comments/Comments";
 
-const PhotoDetails = () => {
+const PhotoDetailsPage = () => {
   const { id } = useParams();
   const [photo, setPhoto] = useState(null);
 
@@ -68,4 +68,4 @@ const PhotoDetails = () => {
   );
 };
 
-export default PhotoDetails;
+export default PhotoDetailsPage;

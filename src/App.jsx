@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import HomePage from "./pages/HomePage/HomePage";
-import PhotoDetails from "./pages/PhotoDetails/PhotoDetails";
+import PhotoDetailsPage from "./pages/PhotoDetailsPage/PhotoDetailsPage";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/photos/:id" element={<PhotoDetails />} />
+          <Route path="/photos/:id" element={<PhotoDetailsPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
