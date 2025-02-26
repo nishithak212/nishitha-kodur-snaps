@@ -5,7 +5,7 @@ import arrowIcon from "../../assets/Icons/Arrow.svg";
 const Header = ({ toggleFilterDrawer, isFilterOpen }) => {
   const location = useLocation();
   const isPhotoPage = location.pathname.startsWith("/photos/");
-  return (
+ return (
     <header className="header">
       <div className="header__content">
         <h1 className="header__title">Snaps</h1>
