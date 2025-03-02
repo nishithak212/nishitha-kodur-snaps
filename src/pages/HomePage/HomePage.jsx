@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import FilterDrawer from "../../components/FilterDrawer/FilterDrawer";
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
 import Hero from "../../components/Hero/Hero";
+import "../HomePage/HomePage.scss";
 
 const HomePage = () => {
   const [photos, setPhotos] = useState([]);
