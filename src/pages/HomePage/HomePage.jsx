@@ -16,6 +16,7 @@ const HomePage = () => {
  const API_URL= import.meta.env.VITE_API_URL;
 // const API_KEY = "?api_key=03cdedfd-0163-4902-a24f-800377492629";
 
+
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
@@ -29,6 +30,8 @@ const HomePage = () => {
     };
     fetchPhotos();
   }, []);
+
+
 
   const handleTagClick = (tag) => {
     setSelectedTag((prevTag) => (prevTag === tag ? null : tag));

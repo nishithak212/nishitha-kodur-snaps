@@ -35,7 +35,7 @@ const PhotoDetailsPage = () => {
       <Header isPhotoPage />
       <div className="photo-details">
         <img
-          src={photo.photo}
+          src={`${API_URL}/${photo.photo}`}
           alt={photo.photoDescription}
           className="photo-details__image"
         />

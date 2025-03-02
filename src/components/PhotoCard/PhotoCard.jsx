@@ -5,8 +5,8 @@ const PhotoCard = ({ photo }) => {
     <div className="photo-card">
       <div className="photo-card__image-wrapper">
         <img
-          src={photo.photo}
-          alt={photo.photographer}
+          src={`${import.meta.env.VITE_API_URL}/${photo.photo}`}
+          alt={photo.photoDescription}
           className="photo-card__image"
         />
         <div className="photo-card__photographer">{photo.photographer}</div>
