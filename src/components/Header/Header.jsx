@@ -1,12 +1,10 @@
-import { Link, useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../Header/Header.scss";
 import arrowIcon from "../../assets/Icons/Arrow.svg";
 
 const Header = ({ toggleFilterDrawer, isFilterOpen }) => {
   const location = useLocation();
   const isPhotoPage = location.pathname.startsWith("/photos/");
-
-
 
   return (
     <header className="header">
