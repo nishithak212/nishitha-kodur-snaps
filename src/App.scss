@@ -1,20 +1,20 @@
-@use '../src/styles/partials/typography' as *;
-@use '../src/styles/partials/variables' as *;
+@use "../src/styles/partials/typography" as *;
+@use "../src/styles/partials/variables" as *;
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
-    font-size: $font-size-WordmarkM;
-    font-family: "Newsreader";
-    font-weight: $font-weight-WordmarkM;
-    line-height: $line-height-WordmarkM;
-    padding-top: 1.5rem;
+  font-size: $font-size-WordmarkM;
+  font-family: "Newsreader";
+  font-weight: $font-weight-WordmarkM;
+  line-height: $line-height-WordmarkM;
+  padding-top: 1.5rem;
 }
 
 body {
-    background-color: $primary-pistachio;
+  background-color: $primary-pistachio;
 }

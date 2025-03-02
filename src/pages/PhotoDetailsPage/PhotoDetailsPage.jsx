@@ -11,16 +11,12 @@ const PhotoDetailsPage = () => {
   const { id } = useParams();
   const [photo, setPhoto] = useState(null);
 
- //const API_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
- // const API_KEY = "?api_key=03cdedfd-0163-4902-a24f-800377492629";
-
- const API_URL= import.meta.env.VITE_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchPhoto = async () => {
       try {
-       //const response = await axios.get(`${API_URL}/photos/${id}/${API_KEY}`);
-       const response = await axios.get(`${API_URL}/photos/${id}`);
+        const response = await axios.get(`${API_URL}/photos/${id}`);
         setPhoto(response.data);
       } catch (error) {
         console.error("Error fetching photo details:", error);
@@ -56,11 +52,6 @@ const PhotoDetailsPage = () => {
             <img src={like} alt="likeIcon-outline" /> {photo.likes} likes{" "}
           </h3>
           <h3 className="photo-details__timestamp">
-            {/* {new Date(photo.timestamp).toLocaleDateString("en-US", {
-              month: "2-digit",
-              day: "2-digit",
-              year: "numeric",
-            })} */}
             {formatDate(photo.timestamp)}
           </h3>
         </div>

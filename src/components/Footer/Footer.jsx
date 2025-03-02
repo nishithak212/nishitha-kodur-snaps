@@ -23,35 +23,39 @@ export default function Footer() {
       <ul className="footer__list footer__list--social">
         <li className="footer__item">
           <a href="https://www.facebook.com">
-          <img
-            className="footer__icons"
-            src={facebookIcon}
-            alt="facebook-icon"
-          /></a>
+            <img
+              className="footer__icons"
+              src={facebookIcon}
+              alt="facebook-icon"
+            />
+          </a>
         </li>
         <li className="footer__item">
           <a href="https://x.com/?mx=2">
-          <img
-            className="footer__icons"
-            src={twitterXIcon}
-            alt="X-twitter-icon"
-          /></a>
+            <img
+              className="footer__icons"
+              src={twitterXIcon}
+              alt="X-twitter-icon"
+            />
+          </a>
         </li>
         <li className="footer__item">
           <a href="https://www.instagram.com">
-          <img
-            className="footer__icons"
-            src={instagramIcon}
-            alt="instagram-icon"
-          /></a>
+            <img
+              className="footer__icons"
+              src={instagramIcon}
+              alt="instagram-icon"
+            />
+          </a>
         </li>
         <li className="footer__item">
           <a href="https://ca.pinterest.com/">
-          <img
-            className="footer__icons"
-            src={pinterestIcon}
-            alt="pinterest-icon"
-          /></a>
+            <img
+              className="footer__icons"
+              src={pinterestIcon}
+              alt="pinterest-icon"
+            />
+          </a>
         </li>
       </ul>
       <ul className="footer__list footer__list--watermark">

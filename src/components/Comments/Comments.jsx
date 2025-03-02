@@ -11,23 +11,17 @@ function Comments() {
   const [commentsList, setCommentsList] = useState([]); //to store fetched comments
   const [errors, setErrors] = useState({ name: false, comment: false });
 
-  const API_URL= import.meta.env.VITE_API_URL;
-  // const API_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
-  // const API_KEY = "?api_key=03cdedfd-0163-4902-a24f-800377492629";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        // const response = await axios.get(
-        //   `${API_URL}/photos/${id}/comments/${API_KEY}`
-           const response = await axios.get(
-          `${API_URL}/photos/${id}/comments`
-        );
+        const response = await axios.get(`${API_URL}/photos/${id}/comments`);
         const comments = response.data;
 
         const formattedComments = comments.map((comment) => ({
           ...comment,
-          //date: new Date(comment.timestamp).toLocaleDateString("en-US"),
+
           date: formatDate(comment.timestamp),
         }));
 
@@ -64,18 +58,15 @@ function Comments() {
     }
     try {
       const newComment = { name, comment };
-      // const response = await axios.post(
-      //   `${API_URL}/photos/${id}/comments/${API_KEY}`,
-      //   newComment
-      // );
+
       const response = await axios.post(
         `${API_URL}/photos/${id}/comments`,
         newComment
       );
       const commentWithDate = {
         ...response.data,
-       // date: new Date(response.data.timestamp).toLocaleDateString("en-US"),
-       date: formatDate(response.data.timestamp),
+
+        date: formatDate(response.data.timestamp),
       };
 
       setCommentsList((prevComments) => [commentWithDate, ...prevComments]);
