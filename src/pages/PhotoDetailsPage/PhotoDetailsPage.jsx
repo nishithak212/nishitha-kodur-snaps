@@ -5,6 +5,7 @@ import "./PhotoDetailsPage.scss";
 import Header from "../../components/Header/Header";
 import like from "../../assets/Icons/Like_Outline.svg";
 import Comments from "../../components/Comments/Comments";
+import { formatDate } from "../../utils/dateUtils";
 
 const PhotoDetailsPage = () => {
   const { id } = useParams();
@@ -55,11 +56,12 @@ const PhotoDetailsPage = () => {
             <img src={like} alt="likeIcon-outline" /> {photo.likes} likes{" "}
           </h3>
           <h3 className="photo-details__timestamp">
-            {new Date(photo.timestamp).toLocaleDateString("en-US", {
+            {/* {new Date(photo.timestamp).toLocaleDateString("en-US", {
               month: "2-digit",
               day: "2-digit",
               year: "numeric",
-            })}
+            })} */}
+            {formatDate(photo.timestamp)}
           </h3>
         </div>
         <h3 className="photo-details__photographer">

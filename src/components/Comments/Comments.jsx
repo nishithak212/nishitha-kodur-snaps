@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import "../Comments/Comments.scss";
+import { formatDate } from "../../utils/dateUtils";
 
 function Comments() {
   const { id } = useParams();
@@ -26,7 +27,8 @@ function Comments() {
 
         const formattedComments = comments.map((comment) => ({
           ...comment,
-          date: new Date(comment.timestamp).toLocaleDateString("en-US"),
+          //date: new Date(comment.timestamp).toLocaleDateString("en-US"),
+          date: formatDate(comment.timestamp),
         }));
 
         setCommentsList(formattedComments.reverse());
@@ -72,7 +74,8 @@ function Comments() {
       );
       const commentWithDate = {
         ...response.data,
-        date: new Date(response.data.timestamp).toLocaleDateString("en-US"),
+       // date: new Date(response.data.timestamp).toLocaleDateString("en-US"),
+       date: formatDate(response.data.timestamp),
       };
 
       setCommentsList((prevComments) => [commentWithDate, ...prevComments]);
