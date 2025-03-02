@@ -9,14 +9,15 @@ const HomePage = () => {
   const [photos, setPhotos] = useState([]);
   const [selectedTag, setSelectedTag] = useState(null);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const tags = [...new Set(photos.flatMap((photo) => photo.tags))];
+  //const tags = [...new Set(photos.flatMap((photo) => photo.tags))];
+  const [tags, setTags] = useState([])
 
  //const API_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
 
  const API_URL= import.meta.env.VITE_API_URL;
 // const API_KEY = "?api_key=03cdedfd-0163-4902-a24f-800377492629";
 
-
+//Fetch photos
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
@@ -31,7 +32,18 @@ const HomePage = () => {
     fetchPhotos();
   }, []);
 
-
+//Fetch tags
+useEffect(()=>{
+  const fetchTags=async() =>{
+    try {
+      const response = await axios.get(`${API_URL}/tags`);
+      setTags(response.data);
+    } catch(error) {
+      console.error("Error fetching tags:", error);
+    }
+  };
+  fetchTags();
+},[]);
 
   const handleTagClick = (tag) => {
     setSelectedTag((prevTag) => (prevTag === tag ? null : tag));
