@@ -11,13 +11,17 @@ const HomePage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const tags = [...new Set(photos.flatMap((photo) => photo.tags))];
 
-  const API_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
-  const API_KEY = "?api_key=03cdedfd-0163-4902-a24f-800377492629";
+ //const API_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
+
+ const API_URL= import.meta.env.VITE_API_URL;
+// const API_KEY = "?api_key=03cdedfd-0163-4902-a24f-800377492629";
 
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
-        const response = await axios.get(`${API_URL}/photos/${API_KEY}`);
+      // const response = await axios.get(`${API_URL}/photos/${API_KEY}`);
+      const response = await axios.get(`${API_URL}/photos`);
+      console.log(response.data);
         setPhotos(response.data);
       } catch (error) {
         console.error("Error fetching photos:", error);
