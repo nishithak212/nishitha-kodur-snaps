@@ -8,7 +8,8 @@ const Header = ({ toggleFilterDrawer, isFilterOpen }) => {
   return (
     <header className="header">
       <div className="header__content">
-        <h1 className="header__title">Snaps</h1>
+        {/* <h1 className="header__title">Snaps</h1> */}
+        <h1 className="header__title"><Link to="/" className="header__link">Snaps</Link></h1>
         {isPhotoPage ? (
           <Link to="/" className="header__back">
             <img src={arrowIcon} alt="arrow-icon" /> Home
